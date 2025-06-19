@@ -16,6 +16,12 @@ public class Payroll {
     public void setDependents(int deps) {
         dependents = deps;
     }
+    public int getHoursWorked() {
+        return hoursWorked;
+    }
+    public int getDependents() {
+        return dependents;
+    }
     public double calculateGrossPay() {
         if (hoursWorked > 40) {
             double overtimePay = (hoursWorked - 40) * 16.78 * 1.5;

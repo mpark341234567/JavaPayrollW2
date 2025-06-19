@@ -48,11 +48,6 @@ class PayrollTest {
         payroll.setHoursWorked(40);
         payroll.setDependents(2);
         
-        double expectedNet = payroll.calculateGrossPay() - 
-            (payroll.calculateSocSec() + payroll.calculateFedTax() + 
-             payroll.calculateStTax() + payroll.calculateUnion() + 
-             payroll.calculateIns());
-        
-        assertEquals(expectedNet, payroll.calculateNet(), 0.01);
+        assertEquals(478.4, payroll.calculateNet(), 0.01);
     }
 }
